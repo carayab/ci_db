@@ -12,13 +12,14 @@
            <configuration>
             <propertyFile>src/main/liquibase/db.properties</propertyFile>
             <password>${db_pass}</password>
+            <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
            </configuration>
            <executions>
              <execution>
                <phase>process-resources</phase>
                <goals>
                  <goal>update</goal>
-                 <goal>rollback</goal>
+
                </goals>
              </execution>
            </executions>
@@ -32,5 +33,4 @@
         </plugin>
       </plugins>
     </build>
-
   </project>
